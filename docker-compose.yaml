@@ -1,0 +1,10 @@
+services:
+  hikvision_event:
+    build: 
+      context: .  
+    container_name: hikvision_event
+    restart: always  
+    ports:
+      - "8786:8786"
+    env_file:
+      - .env
