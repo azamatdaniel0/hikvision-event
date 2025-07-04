@@ -5,7 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+.env
 # Distribution / packaging
 .Python
 build/
@@ -158,3 +158,6 @@ pgdata
 project_data.json
 data.json
 transactions.csv
+
+683 806 220
+
