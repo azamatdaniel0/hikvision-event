@@ -4,13 +4,14 @@ import time
 import re
 from requests.auth import HTTPDigestAuth
 
-CAMERA_IP = "192.168.80.172"
+CAMERA_IP = "192.168.80.173"
 USERNAME = "admin"  
 PASSWORD = "user12345"
 
-
+HIKVISION_EVENT_STREAM_URL = f"http://{CAMERA_IP}/ISAPI/Event/notification/alertStream"
 IP = '192.168.80.100'
 IP = '192.168.80.112'
+# IP = '192.168.80.35'
 
 
 PORT = '8786'
@@ -29,7 +30,7 @@ def put_config():
     </HttpHostNotification>
     """
     
-    event_stream_url = f"http://{CAMERA_IP}/ISAPI/Event/notification/httpHosts/1"
+    event_stream_url = f"{HIKVISION_EVENT_STREAM_URL}"
     
     try:
         response = requests.put(
