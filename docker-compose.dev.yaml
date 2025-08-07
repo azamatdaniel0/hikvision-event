@@ -1,0 +1,13 @@
+services:
+ 
+
+  hikvision_event_dev:
+    build: 
+      context: . 
+      dockerfile: Dockerfile.dev 
+    container_name: hikvision_event_dev
+    restart: always  
+    ports:
+      - "8785:8785"
+    env_file:
+      - .env

@@ -1,4 +1,6 @@
 services:
+
+
   hikvision_event:
     build: 
       context: .  
@@ -8,3 +10,14 @@ services:
       - "8786:8786"
     env_file:
       - .env
+
+  # hikvision_event_dev:
+  #   build: 
+  #     context: . 
+  #     filename: Dockerfile.dev 
+  #   container_name: hikvision_event_dev
+  #   restart: always  
+  #   ports:
+  #     - "8785:8785"
+  #   env_file:
+  #     - .env

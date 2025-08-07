@@ -7,9 +7,10 @@ from requests.auth import HTTPDigestAuth
 CAMERA_IP = "192.168.80.173"
 USERNAME = "admin"  
 PASSWORD = "user12345"
+URL_PATH = '/test'      # Путь на нашем сервере, куда придут события
 
 HIKVISION_EVENT_STREAM_URL = f"http://{CAMERA_IP}/ISAPI/Event/notification/alertStream"
-IP = '192.168.80.100'
+# IP = '192.168.80.100'
 IP = '192.168.80.112'
 # IP = '192.168.80.35'
 
@@ -23,7 +24,7 @@ def put_config():
     <HttpHostNotification version="2.0"
     xmlns="http://www.isapi.org/ver20/XMLSchema">
     <id>{ID}</id>
-    <url>/test</url>
+    <url>{URL_PATH}</url>
     <addressingFormatType>ipaddress</addressingFormatType>
     <ipAddress>{IP}</ipAddress>
     <portNo>{PORT}</portNo>
